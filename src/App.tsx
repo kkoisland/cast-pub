@@ -1,19 +1,30 @@
-import { IntlProvider } from "react-intl";
-import { Route, Routes } from "react-router-dom";
-import ja from "./i18n/ja";
-import en from "./i18n/en";
+import { Outlet, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { IntlProvider } from "./i18n";
+import ArticleDetail from "./pages/ArticleDetail";
 import ArticleList from "./pages/ArticleList";
 
-const locale = navigator.language.startsWith("ja") ? "ja" : "en";
-const messages = locale === "ja" ? ja : en;
+const Layout = () => {
+	return (
+		<>
+			<Header />
+			<Outlet />
+			<Footer />
+		</>
+	);
+};
 
 const App = () => {
 	return (
-		<IntlProvider locale={locale} messages={messages}>
+		<IntlProvider>
 			<Routes>
-				<Route path="/" element={<div>Home</div>} />
-				<Route path="/about" element={<div>About</div>} />
-				<Route path="/articles" element={<ArticleList />} />
+				<Route element={<Layout />}>
+					<Route path="/" element={<ArticleList />} />
+					<Route path="/about" element={<div>About</div>} />
+					<Route path="/articles/:id" element={<ArticleDetail />} />
+					<Route path="/articles/:id/:lang" element={<ArticleDetail />} />
+				</Route>
 			</Routes>
 		</IntlProvider>
 	);
