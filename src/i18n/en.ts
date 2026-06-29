@@ -3,6 +3,10 @@ const messages = {
 	"nav.about": "About",
 	"article.all": "All",
 	"article.empty": "No articles in this category yet",
+	"article.readInEnglish": "Read in English",
+	"article.readInJapanese": "Read in Japanese",
+	"article.notFound": "Article not found",
+	"footer.copyright": "© 2026 by cast-pub. All rights reserved.",
 };
 
 export default messages;
