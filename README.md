@@ -12,7 +12,7 @@ A bilingual tech blog (Japanese / English) powered by React.
 - Bilingual support (Japanese / English) via React Intl, switchable from a dropdown in the Header (persisted in localStorage)
 - English articles auto-generated from Japanese by Claude
 - Dark mode support
-- Article list with category filtering (mock data for now)
+- Article list with category filtering, loaded from Markdown files in `content/`
 - Article detail page with a per-article language override (`/articles/:id/ja` or `/en`), independent of the site-wide language setting
 
 ## Tech Stack
@@ -41,13 +41,17 @@ Open http://localhost:5173/
 ## Project Structure
 
 ```
+content/             — Markdown articles (frontmatter: id, title, publishedAt, category, published)
+  _template.md     — copy this to start a new article
 src/
   App.tsx          — routing + Layout (Header/Outlet/Footer)
   main.tsx         — entry point
   index.css        — global styles (Tailwind + dark mode)
-  types.ts         — shared types (Article, ArticleContent, Locale)
+  types.ts         — shared types (Article, ArticleContent, Locale, ArticleFrontmatter)
   categories.ts    — article category constants (slug + ja/en labels)
-  mockArticles.ts  — mock article data
+  articles.ts      — load and filter articles from content/*.md
+  utils/
+    frontmatter.ts — parse frontmatter from Markdown files (js-yaml)
   i18n/
     index.tsx      — LocaleContext + IntlProvider wrapper (localStorage-backed)
     ja.ts          — Japanese messages
