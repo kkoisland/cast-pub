@@ -1,4 +1,13 @@
 export type Locale = "ja" | "en";
+
+export interface ArticleFrontmatter {
+	id: string;
+	title: string;
+	publishedAt: string;
+	category: string;
+	published: boolean;
+	updatedAt?: string;
+}
 export interface ArticleContent {
 	title: string;
 	excerpt: string;

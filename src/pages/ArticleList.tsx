@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import { Link, useSearchParams } from "react-router-dom";
 import { categories } from "../categories";
-import { mockArticles } from "../mockArticles";
+import { articles } from "../articles";
 import type { Locale } from "../types";
 
 const ArticleList = () => {
@@ -11,8 +11,8 @@ const ArticleList = () => {
 	const selectedCategory = searchParams.get("category");
 
 	const filteredArticles = selectedCategory
-		? mockArticles.filter((article) => article.category === selectedCategory)
-		: mockArticles;
+		? articles.filter((article) => article.category === selectedCategory)
+		: articles;
 
 	const handleSelectCategory = (slug: string | null) => {
 		setSearchParams(slug ? { category: slug } : {});

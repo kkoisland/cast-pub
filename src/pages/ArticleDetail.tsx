@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import { Link, useParams } from "react-router-dom";
 import { categories } from "../categories";
-import { mockArticles } from "../mockArticles";
+import { articles } from "../articles";
 import type { Locale } from "../types";
 
 const ArticleDetail = () => {
@@ -10,7 +10,7 @@ const ArticleDetail = () => {
 	const displayLocale: Locale =
 		lang === "ja" || lang === "en" ? lang : (intl.locale as Locale);
 
-	const article = mockArticles.find((a) => a.id === id);
+	const article = articles.find((a) => a.id === id);
 
 	if (!article) {
 		return (
