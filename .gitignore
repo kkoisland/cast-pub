@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Translation cache
+scripts/translate-cache.json
+
 # Editor directories and files
 !.vscode/extensions.json
 .idea

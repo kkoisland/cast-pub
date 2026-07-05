@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { IntlProvider as ReactIntlProvider } from "react-intl";
 import type { ReactNode } from "react";
 import type { Locale } from "../types";
+import { ENABLE_MULTILINGUAL, LOCALE_JA } from "../constants";
 import en from "./en";
 import ja from "./ja";
 
@@ -29,6 +30,7 @@ export const useLocaleContext = () => {
 };
 
 const getInitialLocale = (): Locale => {
+	if (!ENABLE_MULTILINGUAL) return LOCALE_JA;
 	const saved = localStorage.getItem(STORAGE_KEY);
 	if (saved === "ja" || saved === "en") return saved;
 	return navigator.language.startsWith("ja") ? "ja" : "en";
