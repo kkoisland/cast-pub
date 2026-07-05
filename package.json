@@ -10,9 +10,11 @@
 		"biome:check": "biome check .",
 		"biome:fix": "biome check --write .",
 		"biome:format": "biome format --write .",
-		"biome:lint": "biome lint --write ."
+		"biome:lint": "biome lint --write .",
+		"translate": "node --env-file=.env.local --experimental-strip-types --disable-warning=ExperimentalWarning scripts/translate.ts"
 	},
 	"dependencies": {
+		"@anthropic-ai/sdk": "^0.110.0",
 		"js-yaml": "^5.2.1",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
