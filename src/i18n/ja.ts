@@ -9,7 +9,7 @@ const messages = {
 	"about.heading": "このブログについて",
 	"about.body": "Coming soon.",
 	"about.author": "筆者",
-	"footer.copyright": "© 2026 by cast-pub. All rights reserved.",
+	"footer.copyright": "© 2026 by {siteName}. All rights reserved.",
 };
 
 export default messages;

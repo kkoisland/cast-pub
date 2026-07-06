@@ -9,7 +9,7 @@ const messages = {
 	"about.heading": "About this blog",
 	"about.body": "Coming soon.",
 	"about.author": "Author",
-	"footer.copyright": "© 2026 by cast-pub. All rights reserved.",
+	"footer.copyright": "© 2026 by {siteName}. All rights reserved.",
 };
 
 export default messages;

@@ -1,4 +1,5 @@
 import { useIntl } from "react-intl";
+import { SITE_NAME } from "../constants";
 
 const About = () => {
 	const intl = useIntl();
@@ -7,7 +8,7 @@ const About = () => {
 		<div className="mx-auto max-w-2xl px-4 py-8">
 			<div className="rounded-lg border border-foreground/10 p-8">
 				<p className="text-xs font-semibold tracking-widest text-foreground/40 uppercase">
-					cast-pub
+					{SITE_NAME}
 				</p>
 				<h1 className="mt-4 text-2xl font-medium">
 					{intl.formatMessage({ id: "about.heading" })}
