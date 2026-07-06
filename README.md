@@ -9,7 +9,7 @@ A bilingual tech blog (Japanese / English) powered by React.
 
 ## Features
 
-- Bilingual support (Japanese / English) via React Intl — currently Japanese only; English UI and per-article language toggle to be enabled once translations are complete
+- Bilingual support (Japanese / English) via React Intl — toggle with `ENABLE_MULTILINGUAL` flag in `src/constants.ts`
 - English articles auto-generated from Japanese by Claude (run `pnpm translate` to generate)
 - Dark mode support
 - Article list with category filtering, loaded from Markdown files in `content/ja/`
