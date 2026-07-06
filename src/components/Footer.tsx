@@ -8,7 +8,7 @@ const Footer = () => {
 		<footer className="px-4 py-6">
 			<div className="mx-auto flex max-w-4xl items-center justify-between text-sm text-foreground/60">
 				<span>{intl.formatMessage({ id: "footer.copyright" })}</span>
-				<SiteName />
+				<SiteName className="text-sm" />
 			</div>
 		</footer>
 	);

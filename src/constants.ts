@@ -1,5 +1,8 @@
 import type { Locale } from "./types";
 
+// Also update <title> in index.html when changing this
+export const SITE_NAME = "cast-pub";
+
 export const ENABLE_MULTILINGUAL = false;
 
 export const LOCALE_JA: Locale = "ja";
