@@ -12,7 +12,10 @@ const Header = () => {
 			<div className="mx-auto flex max-w-4xl items-center justify-between">
 				<SiteName />
 				<div className="flex items-center gap-4">
-					<Link to="/about" className="text-sm text-foreground/60 hover:text-foreground">
+					<Link
+						to="/about"
+						className="text-sm text-foreground/60 hover:text-foreground"
+					>
 						About
 					</Link>
 					{ENABLE_MULTILINGUAL && (
