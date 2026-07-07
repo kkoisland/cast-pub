@@ -15,6 +15,9 @@ dist-ssr
 # Translation cache
 scripts/translate-cache.json
 
+# Symlink to production notes (best-practice-note repo)
+pai_cr_voice.md
+
 # Editor directories and files
 !.vscode/extensions.json
 .idea
