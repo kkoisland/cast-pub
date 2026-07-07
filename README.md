@@ -5,7 +5,7 @@ A bilingual tech blog (Japanese / English) powered by React.
 ## Resources
 
 - Live Demo: https://www.kkoisland.com/cast-pub
-- Slides: TBD
+- Slides: https://www.kkoisland.com/slides-slidev/slides/cast-pub/
 
 ## Features
 
