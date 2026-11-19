@@ -27,3 +27,6 @@ pai_cr_voice.md
 *.njsproj
 *.sln
 *.sw?
+
+.claude/*
+!.claude/settings.json
